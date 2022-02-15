@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <title>IB Stuff</title>
     <style>
+        div {
+            opacity: 50%;
+        }
+        p#debug {
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            margin: 0;
+        }
         div#navbar {
             background-color: #AAAACC;
             position: fixed;
@@ -12,10 +21,19 @@
             left: 0;
             top: 0;
         }
+        div#leftbar {
+             background-color: #AACCAA;
+             width: 300px;
+             height: 190vh;
+             margin: 0px;
+             margin-top: 10vh;
+             margin-left: -10px;
+        }
     </style>
 </head>
-<body>
-<div id="navbar">
-</div>
+<body style="overflow: auto;">
+<p id="debug">debug</p>
+<div id="navbar"></div>
+<div id="leftbar"></div>
 </body>
 </html>
