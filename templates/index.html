@@ -17,23 +17,77 @@
             background-color: #AAAACC;
             position: fixed;
             width: 100vw;
-            height: 10vh;
+            height: 100px;
             left: 0;
             top: 0;
         }
         div#leftbar {
-             background-color: #AACCAA;
-             width: 300px;
-             height: 190vh;
-             margin: 0px;
-             margin-top: 10vh;
-             margin-left: -10px;
+            background-color: #AACCAA;
+            width: 300px;
+            height: 1200px;
+            margin: 100px 0 0 -10px; /* top right down left*/
+        }
+        div.nav-elem {
+            background-color: #CCAAAA;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            float: right;
+            text-align: center;
+            line-height: 100px;
+        }
+        div#nav-about {
+            width: 200px;
+        }
+        div#nav-ap {
+            width: 100px;
+        }
+        div#nav-ib {
+            width: 100px;
+        }
+        div#nav-4 {
+            width: 150px;
+        }
+        .nav-e-text {
+            font-size: 25px;
+            font-family: Cambria, serif;
+            font-weight: bold;
         }
     </style>
 </head>
 <body style="overflow: auto;">
 <p id="debug">debug</p>
-<div id="navbar"></div>
+<div id="navbar">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+        <img src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png" alt="placeholder image" height="100px">
+    </a>
+    <a href="https://www.youtube.com/watch?v=U06jlgpMtQs">
+        <div class="nav-elem" id="nav-4">
+            <span class="nav-e-text">#4</span>
+        </div>
+    </a>
+    <a href="https://www.youtube.com/watch?v=7wtfhZwyrcc">
+        <div class="nav-elem" id="nav-ib">
+            <span class="nav-e-text">IB</span>
+        </div>
+    </a>
+    <a href="https://www.youtube.com/watch?v=wDgQdr8ZkTw">
+        <div class="nav-elem" id="nav-ap">
+            <span class="nav-e-text">AP</span>
+        </div>
+    </a>
+    <a href="https://www.youtube.com/watch?v=a1EYnngNHIA">
+        <div class="nav-elem" id="nav-about">
+            <span class="nav-e-text">About</span>
+        </div>
+    </a>
+</div>
 <div id="leftbar"></div>
+<script>
+    function debug(s) {
+        document.getElementById("debug").innerText = s.toString();
+    }
+    debug("" + window.innerWidth + " " + window.innerHeight);
+</script>
 </body>
 </html>
