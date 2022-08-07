@@ -1,161 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>IB Stuff</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>Interlake Club Roadmap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
+
+    
+
+    
+
+<link href="../static/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        div {
-            opacity: 50%;
-        }
-        p#debug {
-            position: absolute;
-            left: 10px;
-            top: 10px;
-            margin: 0;
-        }
-        div#navbar {
-            background-color: #AAAACC;
-            position: absolute;
-            width: 100%;
-            height: 100px;
-            left: 0;
-            top: 0;
-        }
-        div.nav-elem {
-            background-color: #CCAAAA;
-            width: 100px;
-            height: 100px;
-            margin-right: 20px;
-            float: right;
-            text-align: center;
-            line-height: 100px;
-        }
-        .nav-e-text {
-            font-size: 25px;
-            font-family: Cambria, serif;
-            font-weight: bold;
-        }
-        div#nav-dev {
-            background-color: #CCAAAA;
-            width: 50px;
-            height: 100px;
-            margin-right: 20px;
-            float: right;
-        }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-        div#main {
-            background-color: #CCCCAA;
-            position: absolute;
-            width: 100%;
-            height: 469px;
-            left: 0;
-            top: 100px;
-            overflow: scroll;
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
         }
-        div.main-elem {
-            background-color: white;
-            width: 80%;
-            height: 150px;
-            margin: 15px auto;
-            border: 5px solid black;
-        }
-		div.main-elem-left {
-			width: 650px;
-			height: 150px;
-			float: left;
-			opacity: 100%;
-		}
-		div.main-elem-title {
-			background-color: #8888CC;
-			width: 650px;
-			height: 50px;
-			opacity: 100%;
-		}
-		div.main-elem-description {
-			background-color: #88CC88;
-			width: 650px;
-			height: 100px;
-			opacity: 100%;
-		}
-		div.main-elem-video {
-			background-color: #CC8888;
-			width: 350px;
-			height: 150px;
-			float: right;
-			opacity: 100%;
-		}
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      .thumbnail {
+        object-fit:contain;
+      }
     </style>
-</head>
-<body style="overflow: auto;">
-<p id="debug">debug</p>
-<div id="navbar">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-        <img src="https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png" alt="placeholder image" height="100px">
-    </a>
-    <div id="nav-dev">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <div style="height: 50px;">
-                <svg width="40" height="40" style="margin: 7px 0 0 5px;">
-                    <path d="M33.88380296875,2.593219234375 C31.294531562499998,1.3817635390624998 28.52596,0.5013279375 25.631494375,0.0 C25.27601921875,0.6426845406249999 24.860722499999998,1.50710923125 24.574390468749996,2.194755921875 C21.497499218749997,1.732029625 18.448901093750003,1.732029625 15.428596296875,2.194755921875 C15.142319015625,1.50710923125 14.717591218749998,0.6426845406249999 14.358935859374999,0.0 C11.4613448125,0.5013279375 8.689592953125,1.3849986203125 6.100321609375,2.5996345625 C0.8777379578125,10.4916428125 -0.538018609375,18.18762703125 0.16986104531250001,25.774331406250003 C3.6337530625,28.361080468750004 6.99068178125,29.93245265625 10.290958203125001,30.960715 C11.105814859375,29.8392384375 11.8325566875,28.647083593749997 12.458627171875001,27.39066578125 C11.266252968749999,26.93758984375 10.124214437500001,26.378469062500002 9.04512290625,25.729369218749998 C9.3314001875,25.517279531249997 9.611426625,25.295539374999997 9.881967156249999,25.067383906249997 C16.463657812500003,28.14581046875 23.6148325,28.14581046875 30.117894218750003,25.067383906249997 C30.391615,25.295539374999997 30.671586562500003,25.517279531249997 30.954738437499998,25.729369218749998 C29.872466718749997,26.381649375000002 28.72730265625,26.94077015625 27.5349284375,27.39390078125 C28.16099890625,28.647083593749997 28.8846153125,29.84247359375 29.7025975,30.9638953125 C33.0060540625,29.93563296875 36.36609734375,28.36431546875 39.82999203125,25.774331406250003 C40.66058546875,16.97940640625 38.41110734375,9.3541005 33.88380296875,2.593219234375 Z M13.355293,21.108576562499998 C11.379535640625,21.108576562499998 9.759253390625,19.26408671875 9.759253390625,17.01795328125 C9.759253390625,14.771819875 11.34493671875,12.924149796875 13.355293,12.924149796875 C15.365704124999999,12.924149796875 16.9859315625,14.768584796875 16.95133265625,17.01795328125 C16.95445796875,19.26408671875 15.365704124999999,21.108576562499998 13.355293,21.108576562499998 Z M26.644568281250002,21.108576562499998 C24.6688109375,21.108576562499998 23.04852875,19.26408671875 23.04852875,17.01795328125 C23.04852875,14.771819875 24.634157187499998,12.924149796875 26.644568281250002,12.924149796875 C28.6549246875,12.924149796875 30.275206875000002,14.768584796875 30.240607968750002,17.01795328125 C30.240607968750002,19.26408671875 28.6549246875,21.108576562499998 26.644568281250002,21.108576562499998 Z"></path>
-                    <!--  Source: https://www.svgrepo.com/svg/353655/discord-icon  -->
-                </svg>
-            </div>
-        </a>
-        <a href="https://github.com/Brianzhengca/CASWebsite">
-            <div style="height: 50px;">
-                <svg width="50" height="50" style="margin: 4px 0 0 5px">
-                    <path d="M20.0 0.0C8.95 0.0 0.0 8.95 0.0 20.0C0.0 28.849999999999998 5.725 36.324999999999996 13.674999999999999 38.975C14.675 39.15 15.049999999999999 38.55 15.049999999999999 38.025000000000006C15.049999999999999 37.55 15.024999999999999 35.975 15.024999999999999 34.300000000000004C10.0 35.225 8.7 33.075 8.299999999999999 31.95C8.075 31.375 7.1 29.6 6.25 29.125C5.550000000000001 28.75 4.55 27.825000000000003 6.2250000000000005 27.799999999999997C7.800000000000001 27.775 8.924999999999999 29.25 9.3 29.849999999999998C11.100000000000001 32.875 13.975 32.025 15.125 31.5C15.3 30.2 15.825 29.325000000000003 16.4 28.825C11.950000000000001 28.325 7.3 26.6 7.3 18.95C7.3 16.775 8.075 14.975000000000001 9.350000000000001 13.575C9.15 13.075000000000001 8.45 11.025 9.549999999999999 8.275C9.549999999999999 8.275 11.225000000000001 7.75 15.049999999999999 10.325C16.65 9.875 18.35 9.65 20.049999999999997 9.65C21.75 9.65 23.450000000000003 9.875 25.049999999999997 10.325C28.875 7.725 30.55 8.275 30.55 8.275C31.65 11.025 30.950000000000003 13.075000000000001 30.75 13.575C32.025 14.975000000000001 32.8 16.75 32.8 18.95C32.8 26.625 28.125 28.325 23.675 28.825C24.4 29.45 25.025 30.65 25.025 32.525C25.025 35.2 25.0 37.35 25.0 38.025000000000006C25.0 38.55 25.375 39.175 26.375 38.975C34.275000000000006 36.324999999999996 40.0 28.825 40.0 20.0C40.0 8.95 31.05 0.0 20.0 0.0Z"></path>
-                    <!--  Source: https://commons.wikimedia.org/wiki/File:Octicons-mark-github.svg  -->
-                </svg>
-            </div>
-        </a>
-    </div>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-        <div class="nav-elem" style="width: 200px">
-            <span class="nav-e-text">Login</span>
-        </div>
-    </a>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-        <div class="nav-elem" style="width: 200px">
-            <span class="nav-e-text">Clubs</span>
-        </div>
-    </a>
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-        <div class="nav-elem" style="width: 200px">
-            <span class="nav-e-text">About</span>
-        </div>
-    </a>
-</div>
-<div id="main">
-    <div class="main-elem">
-		<div class="main-elem-left">
-			<div class="main-elem-title">
-				Interlake Cybersecurity Club
-			</div>
-			<div class="main-elem-description">
-				President: Brian Zheng.
-				<br>
-				We do a lot of fun stuff here, like failing picoCTF and scratching your heads over an apparently easy rated problem.
-				<br>
-				Brian is good at this though. He can find obscure solutions in like 1 minute. orz.
-			</div>
-		</div>
-		<div class="main-elem-video"></div>
-	</div>
-    <div class="main-elem"></div>
-    <div class="main-elem"></div>
-</div>
-<script>
-    function debug(s) {
-        document.getElementById("debug").innerText = s.toString();
-    }
-    debug("" + window.innerWidth + " " + window.innerHeight);
 
-    function sizechange() {
-        debug("" + window.innerWidth + " " + window.innerHeight);
-        document.getElementById("main").style.height = (window.innerHeight - 100).toString() + "px";
-    }
-    document.body.onresize = sizechange;
-</script>
-</body>
+    
+  </head>
+  <body>
+        <!--header is the same for all pages-->
+<header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">we made this website since we think bsd is terrible at making websites</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <strong>YOUR MOM</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+
+</header>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Interlake Club Roadmap</h1>
+        <p class="lead text-muted">we hafe to actuallyr right a description sometime int he future but its not my problem oops</p>
+        <p>
+          <a href="#" class="btn btn-primary my-2">Sort Clubs Randomly</a>
+          <a href="#" class="btn btn-secondary my-2">Sort Clubs Alphabetically</a>
+          <a href="#" class="btn btn-secondary my-2" style="background:red">Sort Clubs ligma aldrich cookie</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <!--copy and paste this div for each individual cell-->
+        <div class="col">
+          <div class="card shadow-sm">
+            <img class="thumbnail" src="../static/science_club.png" height=225/>
+           
+            <div class="card-body">
+              <p class="card-header"><b>Science Club</b></p>
+              <p class="card-text">Science Club provides fun science related activities, competitions such as NSB and Olympiads, and free food.</p>
+              <a class="card-details" href="mailto:scienceclubinterlake@gmail.com" rel="noopener noreferrer">📧scienceclubinterlake@gmail.com</a>
+              <p class="card-details">📍Room 1708 🕐Fridays 3:30-4 pm</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'clubpage.html';">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('https://discord.gg/3g5TmngyBE')">Discord</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+
+
+      
+      
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+
+
+    <script src="../static/bootstrap.min.js"></script>
+
+      
+  </body>
 </html>

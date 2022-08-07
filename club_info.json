@@ -1,0 +1,13 @@
+{
+    "science": {
+        "name": "Science Club",
+        "date": "Friday",
+        "time": "3:00-400 pm",
+        "room": "1708",
+        "description": "Science Club provides fun science related activities, competitions such as NSB and Olympiads, and free food.",
+        "extended_description": "omg weird crap aaa pvp simp house",
+        "email": "scienceclubinterlake@gmail.com",
+        "link": "https://discord.gg/3g5TmngyBE",
+        "thumbnail": "science_club.png"
+    }
+}
