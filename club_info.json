@@ -10,8 +10,8 @@
         "email": "scienceclubinterlake@gmail.com",
         "link": "https://discord.gg/3g5TmngyBE",
         "thumbnail": "science_club.png",
-        "walk_in": true,
-        "sign_up_link": null
+        "walk_in": false,
+        "sign_up_link": "google.com"
     },
     "science1": {
         "name": "Science Club11111",

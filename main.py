@@ -46,6 +46,7 @@ def make_club_info_box(id):
     link = info[id]["link"]
     thumbnail = info[id]["thumbnail"]
     walk_in = info[id]["walk_in"]
+    sign_up_link = info[id]["sign_up_link"]
 
     walk_in_text = ""
     sign_up_button = ""
@@ -53,7 +54,7 @@ def make_club_info_box(id):
       walk_in_text = "No sign ups required, just walk in"
     else:
       walk_in_text = "Please sign up using the button below"
-      sign_up_button
+      sign_up_button = f'''<button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('{sign_up_link}')">Sign Up</button>'''
 
     return f'''
         <div class="col">
@@ -64,13 +65,14 @@ def make_club_info_box(id):
               <p class="card-header"><b>{name}</b></p>
               <p class="card-text">{description}</p>
               <a class="card-details" href="mailto:{email}" rel="noopener noreferrer">📧{email}</a>
-              <p class="card-details">📍 {location} 🕐{date} {time}</p>
+              <p class="card-details">President: {president}<br>📍 {location} 🕐{date} {time}</p>
               <p class="card-details">{walk_in_text}</p>
               <p class="card-details">
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.location.href = 'clubpage.html';">View</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary" onclick="window.open('{link}')">Discord</button>
+                  {sign_up_button}
                 </div>
               </div>
             </div>
